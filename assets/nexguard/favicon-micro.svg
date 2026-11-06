@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="512" height="512" viewBox="0 0 512 512" role="img" aria-label="NexGuard favicon simplificado">
+<title>NexGuard favicon simplificado</title><defs>
+  <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0" stop-color="#00D8F5"/><stop offset="0.48" stop-color="#00AFF9"/><stop offset="1" stop-color="#087CFF"/></linearGradient>
+  <linearGradient id="orbitGrad" x1="0%" y1="100%" x2="100%" y2="0%"><stop offset="0" stop-color="#00D8F5"/><stop offset="0.55" stop-color="#08C1FF"/><stop offset="1" stop-color="#087CFF"/></linearGradient>
+  <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0" stop-color="#00B4FA"/><stop offset="1" stop-color="#087CFF"/></linearGradient>
+  
+</defs><g id="fundo" inkscape:groupmode="layer" inkscape:label="00 Fundo quadrado"><rect x="0" y="0" width="512" height="512" rx="108" fill="#06142B" /></g><g id="simbolo_nexguard" transform="translate(38 33) scale(1.1)"><g id="escudo" inkscape:groupmode="layer" inkscape:label="01 Escudo de segurança"><path d="M200 37 L311 85 L307 207 C304 264 262 322 200 361 C138 322 96 264 93 207 L89 85 Z M200 76 L278 111 L275 205 C273 249 245 291 200 324 C155 291 127 249 125 205 L122 111 Z" fill="url(#shieldGrad)" fill-rule="evenodd"/></g><g id="monograma_n" inkscape:groupmode="layer" inkscape:label="02 Monograma N"><path d="M136 259 L136 145 L168 130 L252 224 L252 146 L282 158 L282 251 L258 274 L166 175 L166 245 Z" fill="#FFFFFF"/></g></g></svg>

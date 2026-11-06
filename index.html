@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NexGuard | Suporte Técnico, Manutenção e Soluções de TI</title>
+<meta name="description" content="Manutenção de computadores, suporte técnico, redes e Microsoft 365 para empresas e pessoas físicas. Atendimento remoto no Brasil e presencial na região de Campinas.">
+<meta name="theme-color" content="#06142B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="NexGuard">
+<meta property="og:title" content="NexGuard | Suporte Técnico, Manutenção e Soluções de TI">
+<meta property="og:description" content="Suporte técnico, manutenção, redes e nuvem para empresas e pessoas físicas. Atendimento próximo e personalizado.">
+<link rel="canonical" href="https://nexguardtech.com.br/">
+<meta property="og:url" content="https://nexguardtech.com.br/">
+<meta property="og:image" content="https://nexguardtech.com.br/assets/nexguard/nexguard-open-graph-1200x630.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<link rel="icon" href="assets/nexguard/favicon.ico" sizes="any">
+<link rel="icon" type="image/svg+xml" href="assets/nexguard/favicon-micro.svg">
+<link rel="apple-touch-icon" href="assets/nexguard/apple-touch-icon.png">
+<link rel="manifest" href="assets/nexguard/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>
+  /* Aplica o tema antes de pintar a página, para não piscar. */
+  (function () {
+    var root = document.documentElement;
+    root.classList.add('js');
+    var saved = null;
+    try { saved = localStorage.getItem('nexguard-tema'); } catch (e) {}
+    if (saved === 'light' || saved === 'dark') root.setAttribute('data-theme', saved);
+    var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    root.classList.toggle('is-dark', dark);
+  })();
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NexGuard",
+  "url": "https://nexguardtech.com.br/",
+  "image": "https://nexguardtech.com.br/assets/nexguard/nexguard-open-graph-1200x630.png",
+  "slogan": "Tecnologia, Segurança, Operação",
+  "description": "Suporte técnico, manutenção de computadores, redes e nuvem para empresas e pessoas físicas.",
+  "email": "contato@nexguardtech.com.br",
+  "telephone": "+55-19-99342-7954",
+  "areaServed": ["Brasil (remoto)", "Hortolândia", "Campinas", "Sumaré"],
+  "knowsAbout": ["Manutenção de computadores", "Suporte técnico", "Microsoft 365", "Google Workspace", "Redes", "Infraestrutura de TI"]
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<!-- Ícones reutilizados na página -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <path id="shield-shape" d="M111 0L222 48L218 170C215 227 173 285 111 324C49 285 7 227 4 170L0 48Z"/>
+    <clipPath id="shield-clip"><use href="#shield-shape"/></clipPath>
+  </defs>
+  <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <symbol id="i-support" viewBox="0 0 24 24"><path d="M4 13v-1a8 8 0 0 1 16 0v1"/><rect x="2.5" y="13" width="4" height="6" rx="1.5"/><rect x="17.500" y="13" width="4" height="6" rx="1.5"/><path d="M19.500 19c0 1.700-1.800 2.500-4 2.500H13"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M7 19a4.500 4.500 0 0 1-.6-8.960A6 6 0 0 1 18 9.500a4.800 4.800 0 0 1-.8 9.500H7Z"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><circle cx="8" cy="15.500" r="4.500"/><path d="m11.300 12.200 8.200-8.200M16 7.500l3 3M13.500 10l2 2"/></symbol>
+    <symbol id="i-backup" viewBox="0 0 24 24"><ellipse cx="12" cy="5.500" rx="8" ry="3"/><path d="M4 5.500v6.500c0 1.700 3.600 3 8 3s8-1.300 8-3V5.500"/><path d="M4 12v6.500c0 1.700 3.600 3 8 3s8-1.300 8-3V12"/></symbol>
+    <symbol id="i-network" viewBox="0 0 24 24"><rect x="9" y="2.500" width="6" height="5" rx="1"/><rect x="2.500" y="16.500" width="6" height="5" rx="1"/><rect x="15.500" y="16.500" width="6" height="5" rx="1"/><path d="M12 7.500V12M5.500 16.500V12h13v4.500"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 2.500 4 5.500V11c0 5 3.400 8.800 8 10.500 4.600-1.700 8-5.500 8-10.500V5.500l-8-3Z"/><path d="M12 8v4.500M12 16v.01"/></symbol>
+    <symbol id="i-prevent" viewBox="0 0 24 24"><path d="M12 2.500 4 5.500V11c0 5 3.400 8.800 8 10.500 4.600-1.700 8-5.500 8-10.500V5.500l-8-3Z"/><path d="m8.800 12 2.200 2.200 4.200-4.400"/></symbol>
+    <symbol id="i-fast" viewBox="0 0 24 24"><circle cx="13" cy="13" r="8.500"/><path d="M13 8.500V13l3 2M10 1.800h6M2 9h3M1.500 13.500H4"/></symbol>
+    <symbol id="i-trust" viewBox="0 0 24 24"><rect x="4.500" y="10.500" width="15" height="11" rx="2.500"/><path d="M8 10.500V7a4 4 0 0 1 8 0v3.500M12 15v2.500"/></symbol>
+    <symbol id="i-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M8.500 7H17v8.500"/></symbol>
+    <symbol id="i-right" viewBox="0 0 24 24"><path d="M4.500 12h15M13.500 6l6 6-6 6"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20.500 14.500A8.500 8.500 0 0 1 9.500 3.500a8.500 8.500 0 1 0 11 11Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.500v2M12 19.500v2M2.500 12h2M19.500 12h2M5.300 5.300l1.400 1.400M17.300 17.300l1.400 1.400M5.300 18.700l1.400-1.400M17.300 6.700l1.400-1.400"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M3.500 7h17M3.500 12h17M3.500 17h17"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m5.500 5.500 13 13M18.500 5.500l-13 13"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2.500" y="4.500" width="19" height="15" rx="2.500"/><path d="m3 7 9 6.500L21 7"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21.500s7-6.200 7-11.500a7 7 0 1 0-14 0c0 5.300 7 11.500 7 11.500Z"/><circle cx="12" cy="10" r="2.500"/></symbol>
+    <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.200 2"/></symbol>
+  </g>
+</svg>
+
+<div class="topbar">
+  <div class="wrap topbar-inner">
+    <span class="topbar-note">
+<span class="live-dot" aria-hidden="true">
+</span>Tecnologia • Segurança • Operação</span>
+    <span class="topbar-links">
+      <span><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Atendimento mediante agendamento</span>
+      <a href="https://wa.me/5519993427954?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20NexGuard%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>(19) 99342-7954</a>
+      <a class="topbar-mail" href="mailto:contato@nexguardtech.com.br"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>contato@nexguardtech.com.br</a>
+    </span>
+  </div>
+</div>
+
+<header class="site-header" id="siteHeader">
+  <div class="wrap header-inner">
+    <a class="brand" href="#topo" aria-label="NexGuard, voltar ao início">
+      <img class="brand-logo logo-on-light" src="assets/nexguard/nexguard-logo-header-fundo-claro.svg" alt="" width="1600" height="470">
+      <img class="brand-logo logo-on-dark" src="assets/nexguard/nexguard-logo-header-fundo-escuro.svg" alt="" width="1600" height="470">
+    </a>
+
+    <nav class="nav" id="mainNav" aria-label="Principal">
+      <a href="#solucoes">Soluções</a>
+      <a href="#como-trabalhamos">Como trabalhamos</a>
+      <a href="#checkup">Checkup de TI</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a href="#sobre">Sobre</a>
+      <a class="btn btn-primary nav-cta" href="#contato">Solicitar orçamento</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Ativar tema escuro">
+        <svg class="icon theme-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="icon theme-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+      <a class="btn btn-primary header-cta" href="#contato">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+      <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="mainNav">
+        <svg class="icon menu-open" aria-hidden="true"><use href="#i-menu"/></svg>
+        <svg class="icon menu-close" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ===== HERÓI ===== -->
+  <section class="hero" id="topo">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Tecnologia para empresas e pessoas físicas</p>
+        <h1>
+<span>Sua tecnologia</span> <span>funcionando</span> <span class="grad">como deveria.</span>
+</h1>
+        <p class="hero-lead">Suporte técnico, manutenção de computadores, redes e soluções em nuvem para empresas e pessoas físicas. Atendimento profissional, direto e personalizado.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="#contato">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+          <a class="btn btn-quiet btn-lg" href="#contato" data-flow="support">Preciso de suporte<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
+</a>
+        </div>
+        <ul class="hero-notes">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg>Remoto em todo o Brasil. Presencial em Campinas, Hortolândia, Sumaré e região.</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg>Atendimento mediante agendamento</li>
+        </ul>
+      </div>
+
+      <div class="stage" id="heroStage">
+        <div class="stage-visual" aria-hidden="true">
+          <div class="stage-sweep">
+</div>
+          <svg class="stage-art" viewBox="0 0 600 600" focusable="false">
+            <g class="rings" fill="none">
+              <circle cx="300" cy="300" r="288"/>
+              <circle class="ring-dash" cx="300" cy="300" r="232" stroke-dasharray="3 7"/>
+            </g>
+            <g class="ring-orbiters">
+              <circle cx="300" cy="12" r="4.500"/>
+              <circle cx="300" cy="588" r="3"/>
+              <circle cx="12" cy="300" r="3"/>
+            </g>
+            <g class="traces" fill="none">
+              <g data-trace="0">
+                <path class="trace" pathLength="100" d="M175 176 L150 151 L150 100"/>
+                <path class="pulse" pathLength="100" d="M175 176 L150 151 L150 100"/>
+                <circle class="term" cx="175" cy="176" r="5"/>
+              </g>
+              <g data-trace="1">
+                <path class="trace" pathLength="100" d="M476 300 L496 300 L510 314 L510 366"/>
+                <path class="pulse" pathLength="100" d="M476 300 L496 300 L510 314 L510 366"/>
+                <circle class="term" cx="476" cy="300" r="5"/>
+              </g>
+              <g data-trace="2">
+                <path class="trace" pathLength="100" d="M160 406 L130 436 L130 482"/>
+                <path class="pulse" pathLength="100" d="M160 406 L130 436 L130 482"/>
+                <circle class="term" cx="160" cy="406" r="5"/>
+              </g>
+            </g>
+            <circle class="disc" cx="300" cy="300" r="176"/>
+          </svg>
+          <div class="stage-mark">
+            <!-- A luz acompanha a órbita oficial: passa atrás do escudo e volta pela frente. -->
+            <svg class="mark-fx" viewBox="0 0 400 400" focusable="false"><path class="comet comet-back" pathLength="100" d="M357.2 157.8A166 45 -19.8 0 0 44.8 270.2"/></svg>
+            <img class="stage-logo logo-on-light" src="assets/nexguard/NexGuard_2.0_Simbolo_Claro.svg" alt="" width="400" height="400">
+            <img class="stage-logo logo-on-dark" src="assets/nexguard/NexGuard_2.0_Simbolo_Escuro.svg" alt="" width="400" height="400">
+            <svg class="mark-fx" viewBox="0 0 400 400" focusable="false"><path class="comet comet-front" pathLength="100" d="M44.8 270.2A166 45 -19.8 0 0 357.2 157.8"/></svg>
+          </div>
+        </div>
+
+        <div class="float-card fc-a" data-card="0">
+          <span class="fc-icon"><svg class="icon" aria-hidden="true"><use href="#i-prevent"/></svg>
+</span>
+          <span><small>Manutenção</small><b>Cuidado com seu computador</b>
+</span>
+        </div>
+        <div class="float-card fc-b" data-card="1">
+          <span class="fc-icon"><svg class="icon" aria-hidden="true"><use href="#i-fast"/></svg>
+</span>
+          <span><small>Suporte</small><b>Remoto e presencial</b>
+</span>
+        </div>
+        <div class="float-card fc-c" data-card="2">
+          <span class="fc-icon"><svg class="icon" aria-hidden="true"><use href="#i-trust"/></svg>
+</span>
+          <span><small>Organização</small><b>Contas, redes e nuvem</b>
+</span>
+        </div>
+        <p class="stage-status">
+<span class="live-dot" aria-hidden="true">
+</span>Atendimento próximo, conforme sua necessidade</p>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <ul class="strip" aria-label="O que entregamos">
+        <li>Nota fiscal disponível</li>
+<li>Orçamento conforme necessidade</li>
+<li>Contratos personalizados</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE ===== -->
+  <section class="section" id="sobre">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <p class="eyebrow">Sobre a NexGuard</p>
+        <h2>Tecnologia com cuidado <span class="grad">e proximidade.</span>
+</h2>
+        <p class="lead">A NexGuard oferece serviços de tecnologia para empresas e pessoas físicas que buscam soluções práticas, atendimento próximo e suporte técnico especializado.</p>
+<p class="lead">Com atuação em manutenção de computadores, redes, infraestrutura e ambientes em nuvem, cada atendimento é conduzido conforme a necessidade real do cliente, desde a identificação do problema até a aplicação da solução adequada.</p>
+        <a class="link-arrow" href="#como-trabalhamos">Veja como trabalhamos<svg class="icon" aria-hidden="true"><use href="#i-right"/></svg>
+</a>
+      </div>
+
+      <ul class="pillars reveal">
+        <li>
+          <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-prevent"/></svg>
+</span>
+          <div>
+            <h3>Prevenção</h3>
+            <p>Mais do que resolver problemas, trabalhamos para evitar que eles aconteçam.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-fast"/></svg>
+</span>
+          <div>
+            <h3>Agilidade</h3>
+            <p>Atendimento técnico com escopo claro e agendamento conforme disponibilidade.</p>
+          </div>
+        </li>
+        <li>
+          <span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-trust"/></svg>
+</span>
+          <div>
+            <h3>Confiança</h3>
+            <p>Transparência nos valores e soluções aplicadas conforme a sua necessidade.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== SOLUÇÕES ===== -->
+  <section class="section section-tint" id="solucoes">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Soluções</p>
+          <h2>Soluções para a sua <span class="grad">tecnologia funcionar melhor.</span>
+</h2>
+        </div>
+        <p class="lead">De um computador com problemas à organização da TI da empresa: escolha o que você precisa.</p>
+      </div>
+
+      <div class="filter reveal" role="group" aria-labelledby="filterLabel">
+        <span class="filter-label" id="filterLabel">O que você precisa agora?</span>
+        <button type="button" class="chip" data-filter="todas" aria-pressed="true">Ver todas</button>
+        <button type="button" class="chip" data-filter="resolver" aria-pressed="false">Resolver um problema</button>
+        <button type="button" class="chip" data-filter="riscos" aria-pressed="false">Reduzir riscos</button>
+        <button type="button" class="chip" data-filter="organizar" aria-pressed="false">Organizar o ambiente</button>
+        <span class="visually-hidden" id="filterStatus" role="status">
+</span>
+      </div>
+
+      <div class="cards">
+<article class="card reveal" data-tags="resolver organizar">
+<span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-support"/></svg>
+</span>
+<h3>Computadores e notebooks</h3>
+<p>Diagnóstico, manutenção e melhorias para o seu computador.</p>
+<details class="service-details">
+<summary>Exemplos de atendimento</summary>
+<ul>
+<li>Formatação e instalação do Windows; programas e drivers.</li>
+<li>Diagnóstico de hardware, software e falhas de inicialização.</li>
+<li>Remoção de vírus e programas indesejados; otimização de desempenho.</li>
+<li>Instalação de SSD e memória RAM; limpeza interna e manutenção preventiva.</li>
+<li>Montagem e configuração de computadores.</li>
+</ul>
+<p>Peças e licenças são orçadas separadamente.</p>
+</details>
+<a class="card-link" href="#contato" data-subject="Computadores e notebooks">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+<a class="service-wa" data-wa-service="Computadores e notebooks" href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</article>
+<article class="card reveal" data-tags="resolver organizar">
+<span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-network"/></svg>
+</span>
+<h3>Redes e infraestrutura</h3>
+<p>Conectividade e organização para a sua casa ou empresa.</p>
+<details class="service-details">
+<summary>Exemplos de atendimento</summary>
+<ul>
+<li>Configuração de roteadores, Wi-Fi e switches.</li>
+<li>Cabeamento estruturado e diagnóstico de conectividade.</li>
+<li>Configuração de firewall pfSense e VPN.</li>
+<li>Windows Server e compartilhamento de arquivos e recursos.</li>
+<li>Organização e manutenção de redes corporativas.</li>
+</ul>
+<p>Orçamento conforme a necessidade e a complexidade.</p>
+</details>
+<a class="card-link" href="#contato" data-subject="Redes e infraestrutura">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+<a class="service-wa" data-wa-service="Redes e infraestrutura" href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</article>
+<article class="card reveal" data-tags="organizar">
+<span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg>
+</span>
+<h3>Microsoft 365 e Google Workspace</h3>
+<p>Contas, e-mails e ferramentas de nuvem organizados para o dia a dia.</p>
+<details class="service-details">
+<summary>Exemplos de atendimento</summary>
+<ul>
+<li>E-mail profissional e configuração do Outlook.</li>
+<li>Administração de Microsoft 365, OneDrive, SharePoint e Teams.</li>
+<li>Microsoft Entra ID; gerenciamento de contas e permissões.</li>
+<li>Migração de e-mails e ambientes.</li>
+<li>Configuração e administração de Google Workspace; apoio na escolha de licenças.</li>
+</ul>
+<p>Licenças conforme contratação.</p>
+</details>
+<a class="card-link" href="#contato" data-subject="Microsoft 365 e Google Workspace">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+<a class="service-wa" data-wa-service="Microsoft 365 e Google Workspace" href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</article>
+<article class="card reveal" data-tags="resolver">
+<span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-support"/></svg>
+</span>
+<h3>Impressoras e periféricos</h3>
+<p>Instalação e configuração para conectar seus equipamentos.</p>
+<details class="service-details">
+<summary>Exemplos de atendimento</summary>
+<ul>
+<li>Instalação e configuração de impressoras, inclusive em rede.</li>
+<li>Instalação e correção de drivers.</li>
+<li>Diagnóstico de conexão e impressão.</li>
+<li>Configuração de periféricos e acessórios.</li>
+</ul>
+<p>Para defeitos mecânicos e reparos internos de impressoras, é possível indicar um parceiro especializado.</p>
+</details>
+<a class="card-link" href="#contato" data-subject="Impressoras e periféricos">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+<a class="service-wa" data-wa-service="Impressoras e periféricos" href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</article>
+<article class="card reveal" data-tags="resolver organizar">
+<span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-trust"/></svg>
+</span>
+<h3>Suporte de TI para empresas</h3>
+<p>Contratos mensais personalizados para a rotina do seu negócio.</p>
+<details class="service-details">
+<summary>Exemplos de atendimento</summary>
+<ul>
+<li>Suporte remoto e visitas presenciais conforme contratação.</li>
+<li>Gestão Microsoft 365 e manutenção preventiva de computadores.</li>
+<li>Suporte à rede e administração básica do ambiente de TI.</li>
+<li>Orientação e melhorias tecnológicas.</li>
+</ul>
+<p>Escopo definido conforme usuários, equipamentos, ambiente e necessidades.</p>
+</details>
+<a class="card-link" href="#contato" data-subject="Suporte de TI para empresas">Solicitar proposta personalizada<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+<a class="service-wa" data-wa-service="Suporte de TI para empresas" href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</article>
+<article class="card reveal" data-tags="riscos organizar">
+<span class="tile"><svg class="icon" aria-hidden="true"><use href="#i-key"/></svg>
+</span>
+<h3>Consultoria e orientação tecnológica</h3>
+<p>Decisões práticas para escolher e organizar sua tecnologia.</p>
+<details class="service-details">
+<summary>Exemplos de atendimento</summary>
+<ul>
+<li>Avaliação das necessidades e orientação sobre ferramentas e plataformas.</li>
+<li>Recomendações de soluções de segurança e indicação de plataformas de backup.</li>
+<li>Orientação para organizar acessos e recursos.</li>
+<li>Apoio na escolha de tecnologias adequadas.</li>
+</ul>
+<p>Recomendações conforme o cenário e os objetivos do cliente.</p>
+</details>
+<a class="card-link" href="#contato" data-subject="Consultoria e orientação tecnológica">Solicitar orçamento<svg class="icon" aria-hidden="true"><use href="#i-ne"/></svg>
+</a>
+<a class="service-wa" data-wa-service="Consultoria e orientação tecnológica" href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</article>
+</div>
+</div>
+</section>
+
+<section class="section section-tint" id="precos">
+<div class="wrap">
+<div class="section-head">
+<div>
+<p class="eyebrow">Computadores e notebooks</p>
+<h2>Manutenção com <span class="grad">valores transparentes.</span>
+</h2>
+</div>
+<p class="lead">O orçamento considera a necessidade e a complexidade do atendimento. Os demais serviços e contratos mensais têm propostas personalizadas.</p>
+</div>
+<div id="priceList" class="price-list">
+</div>
+<p id="priceIntro" class="lead">Solicite um orçamento para conhecer os valores do seu atendimento.</p>
+<p class="price-note">Os valores podem variar conforme a complexidade do serviço. Peças, licenças e deslocamento, quando aplicáveis, são cobrados separadamente mediante informação prévia.</p>
+<a class="btn btn-primary" href="#contato" data-subject="Computadores e notebooks">Solicitar orçamento de manutenção</a>
+</div>
+</section>
+  <!-- ===== COMO TRABALHAMOS ===== -->
+  <section class="section" id="como-trabalhamos">
+    <div class="wrap">
+      <div class="process reveal">
+        <svg class="process-art" viewBox="0 0 420 300" aria-hidden="true" focusable="false">
+          <g fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M420 50H300L250 100H170"/><circle class="art-node" cx="164" cy="100" r="6"/>
+            <path d="M420 110H330L290 150H230"/><circle class="art-node" cx="224" cy="150" r="6"/>
+            <path d="M420 170H350L310 210H120"/><circle class="art-node" cx="114" cy="210" r="6"/>
+            <path class="art-pulse" pathLength="100" d="M420 50H300L250 100H170"/>
+            <path class="art-pulse" pathLength="100" d="M420 110H330L290 150H230"/>
+            <path class="art-pulse" pathLength="100" d="M420 170H350L310 210H120"/>
+          </g>
+        </svg>
+        <p class="eyebrow eyebrow-light">Como trabalhamos</p>
+        <h2>Como funciona <br>o seu atendimento.</h2>
+        <p class="process-lead">Cada etapa tem um objetivo claro, e você acompanha o que está sendo feito.</p>
+
+        <ol class="steps">
+<li>
+<span class="step-num">01</span>
+<h3>Contato</h3>
+<p>Você descreve sua necessidade.</p>
+</li>
+<li>
+<span class="step-num">02</span>
+<h3>Avaliação</h3>
+<p>A NexGuard analisa as informações e identifica o atendimento necessário.</p>
+</li>
+<li>
+<span class="step-num">03</span>
+<h3>Orçamento</h3>
+<p>Você recebe os valores e as condições do serviço.</p>
+</li>
+<li>
+<span class="step-num">04</span>
+<h3>Execução</h3>
+<p>Após aprovação, o atendimento é realizado conforme agendamento e escopo combinado.</p>
+</li>
+<li>
+<span class="step-num">05</span>
+<h3>Conclusão</h3>
+<p>O serviço é finalizado com as orientações pertinentes.</p>
+</li>
+</ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CHECKUP ===== -->
+  <section class="section section-flush" id="checkup">
+    <div class="wrap">
+      <div class="checkup reveal">
+        <div class="checkup-intro">
+          <p class="eyebrow">Checkup de TI</p>
+          <h2>Como está a sua <span class="grad">tecnologia hoje?</span>
+</h2>
+          <p class="lead">Responda 6 perguntas em cerca de 1 minuto e veja por onde vale começar.</p>
+
+          <div class="ck-visual">
+            <svg class="ck-shield" id="ckShield" viewBox="-4 -4 230 332" role="img" aria-label="Escudo com seis camadas, uma para cada pergunta">
+              <g clip-path="url(#shield-clip)">
+                <rect class="ck-band" x="0" y="0" width="222" height="53"/>
+                <rect class="ck-band" x="0" y="54" width="222" height="53"/>
+                <rect class="ck-band" x="0" y="108" width="222" height="53"/>
+                <rect class="ck-band" x="0" y="162" width="222" height="53"/>
+                <rect class="ck-band" x="0" y="216" width="222" height="53"/>
+                <rect class="ck-band" x="0" y="270" width="222" height="54"/>
+              </g>
+              <use class="ck-outline" href="#shield-shape"/>
+            </svg>
+            <ul class="ck-legend" aria-hidden="true">
+              <li><i class="k-ok"></i>Sim</li>
+              <li><i class="k-part"></i>Em parte</li>
+              <li><i class="k-no"></i>Não ou não sei</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="ck-card" id="ckCard">
+          <p>Para fazer o checkup, ative o JavaScript no navegador ou <a href="#contato">fale com a NexGuard</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DÚVIDAS ===== -->
+  <section class="section" id="duvidas">
+    <div class="wrap faq-grid">
+      <div class="reveal">
+        <p class="eyebrow">Dúvidas</p>
+        <h2>Antes de <span class="grad">conversarmos.</span>
+</h2>
+        <p class="lead">O que normalmente perguntam antes do primeiro contato.</p>
+      </div>
+      <div class="faq reveal">
+<details>
+<summary>A NexGuard atende pessoas físicas?</summary>
+<p>Sim. O atendimento é para pessoas físicas, profissionais autônomos, escritórios, estabelecimentos comerciais e empresas.</p>
+</details>
+<details>
+<summary>O atendimento pode ser remoto?</summary>
+<p>Sim, em todo o Brasil, quando o serviço puder ser realizado à distância.</p>
+</details>
+<details>
+<summary>Em quais cidades há atendimento presencial?</summary>
+<p>Hortolândia, Campinas, Sumaré e região, mediante agendamento e disponibilidade.</p>
+</details>
+<details>
+<summary>Existe cobrança de deslocamento?</summary>
+<p>Pode haver cobrança, informada previamente no orçamento.</p>
+</details>
+<details>
+<summary>Os serviços têm preços fixos?</summary>
+<p>Os valores dependem da necessidade e da complexidade. Peças, licenças e deslocamento são informados separadamente quando aplicáveis.</p>
+</details>
+<details>
+<summary>Como solicitar orçamento?</summary>
+<p>Escolha um serviço e preencha o formulário de orçamento. O WhatsApp também está disponível como alternativa.</p>
+</details>
+<details>
+<summary>A NexGuard emite nota fiscal?</summary>
+<p>Sim, há emissão de nota fiscal para os serviços.</p>
+</details>
+<details>
+<summary>É possível contratar suporte mensal?</summary>
+<p>Sim. A proposta é personalizada conforme usuários, equipamentos, ambiente e necessidades.</p>
+</details>
+<details>
+<summary>Como funciona o agendamento?</summary>
+<p>Após avaliar a solicitação e combinar o escopo e as condições, o atendimento é agendado conforme disponibilidade, com horários flexíveis.</p>
+</details>
+<details>
+<summary>A NexGuard faz manutenção de impressoras?</summary>
+<p>Realiza instalação, configuração e diagnóstico de conexão e impressão. Para defeitos mecânicos ou reparos internos, é possível indicar um parceiro especializado.</p>
+</details>
+<details>
+<summary>Quais serviços Microsoft 365 são oferecidos?</summary>
+<p>E-mails, Outlook, OneDrive, SharePoint, Teams, Entra ID, contas, permissões, migrações e apoio na escolha e configuração de licenças.</p>
+</details>
+</div>
+    </div>
+  </section>
+
+  <!-- ===== CONTATO ===== -->
+  <section class="contact" id="contato">
+<div class="wrap contact-grid">
+<div class="contact-copy reveal">
+<p class="eyebrow eyebrow-light">Vamos conversar</p>
+<h2>O próximo passo começa com a sua necessidade.</h2>
+<p>Serviços avulsos ou contratos mensais personalizados. Atendimento remoto em todo o Brasil e presencial em Hortolândia, Campinas, Sumaré e região, mediante agendamento e disponibilidade.</p>
+<ul class="contact-list">
+<li>Horários flexíveis mediante agendamento.</li>
+<li>Deslocamento informado previamente, quando aplicável.</li>
+<li>Nota fiscal disponível.</li>
+</ul>
+<a class="btn btn-whatsapp btn-lg contact-wa" data-wa-general href="https://wa.me/5519993427954" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+</div>
+<div>
+<div class="flow-switch" role="group" aria-label="Tipo de solicitação">
+<button type="button" class="chip" data-switch="quote" aria-pressed="true">Solicitar orçamento</button>
+<button type="button" class="chip" data-switch="support" aria-pressed="false">Preciso de suporte</button>
+</div>
+<form method="post" action="/api/request" class="form request-form" id="contactForm" data-flow="quote" >
+<h3>Solicitar orçamento</h3>
+<p class="form-note">Conte o que você precisa para preparar uma proposta.</p>
+<div class="form-row">
+<div class="field">
+<label for="qName">Nome</label>
+<input id="qName" name="qName" type="text" required maxlength="120" autocomplete="name" minlength="2">
+</div>
+<div class="field">
+<label for="qEmail">E-mail</label>
+<input id="qEmail" name="qEmail" type="email" required maxlength="254" autocomplete="email">
+</div>
+</div>
+<div class="form-row">
+<div class="field">
+<label for="qPhone">WhatsApp</label>
+<input id="qPhone" name="qPhone" type="tel" required maxlength="120" autocomplete="tel" inputmode="tel" pattern="[0-9+\(\) .\-]{10,22}" title="Informe um telefone com DDD.">
+</div>
+<div class="field">
+<label for="qPerson">Tipo de cliente</label>
+<select id="qPerson" name="qPerson" required>
+<option value="">Selecione</option>
+<option value="pf">Pessoa física</option>
+<option value="pj">Pessoa jurídica / empresa</option>
+</select>
+</div>
+</div>
+<div class="company-field" hidden>
+<div class="field">
+<label for="qCompany">Nome da empresa</label>
+<input id="qCompany" name="qCompany" type="text" maxlength="120" autocomplete="organization">
+</div>
+</div>
+<div class="field">
+<label for="qMode">Modalidade preferida</label>
+<select id="qMode" name="qMode" required>
+<option value="">Selecione</option>
+<option value="remoto">Remoto</option>
+<option value="presencial">Presencial</option>
+</select>
+</div>
+<div class="form-row location-fields">
+<div class="field">
+<label for="qCity">Cidade</label>
+<input id="qCity" name="qCity" type="text" required maxlength="120" autocomplete="address-level2">
+</div>
+<div class="field">
+<label for="qState">Estado</label>
+<select id="qState" name="qState" required>
+<option value="">Selecione</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AP">AP</option>
+<option value="AM">AM</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MT">MT</option>
+<option value="MS">MS</option>
+<option value="MG">MG</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PR">PR</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RS">RS</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="SC">SC</option>
+<option value="SP">SP</option>
+<option value="SE">SE</option>
+<option value="TO">TO</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="qService">Serviço desejado</label>
+<select id="qService" name="qService" required>
+<option value="">Selecione</option>
+<option value="Computadores e notebooks">Computadores e notebooks</option>
+<option value="Redes e infraestrutura">Redes e infraestrutura</option>
+<option value="Microsoft 365 e Google Workspace">Microsoft 365 e Google Workspace</option>
+<option value="Impressoras e periféricos">Impressoras e periféricos</option>
+<option value="Suporte de TI para empresas">Suporte de TI para empresas</option>
+<option value="Consultoria e orientação tecnológica">Consultoria e orientação tecnológica</option>
+<option value="Resultado do checkup de TI">Resultado do checkup de TI</option>
+<option value="Ainda não sei">Ainda não sei</option>
+</select>
+</div>
+<div class="field">
+<label for="qMessage">Descrição da necessidade</label>
+<textarea id="qMessage" name="qMessage" rows="5" minlength="10" maxlength="5000" required>
+</textarea>
+</div>
+<div class="field">
+<label for="qPeriod">Melhor período para contato (opcional)</label>
+<input id="qPeriod" name="qPeriod" type="text" maxlength="120" >
+</div>
+<div class="honeypot" aria-hidden="true">
+<label for="qWebsite">Deixe este campo vazio</label>
+<input id="qWebsite" name="website" tabindex="-1" autocomplete="off">
+</div>
+<div class="turnstile-slot">
+</div>
+<p class="form-note">Seus dados serão usados para avaliar a solicitação e entrar em contato. Não envie senhas, documentos ou informações sensíveis. Dúvidas sobre seus dados: <a data-contact-email href="mailto:contato@nexguardtech.com.br">contato@nexguardtech.com.br</a>.</p>
+<button class="btn btn-primary btn-lg btn-block" type="submit" disabled>Enviar solicitação</button>
+<p class="form-status" role="status" aria-live="polite" hidden>
+</p>
+<noscript>Ative o JavaScript para enviar o formulário ou utilize o WhatsApp.</noscript>
+</form>
+<form method="post" action="/api/request" class="form request-form" id="supportForm" data-flow="support" hidden>
+<h3>Pedido de suporte</h3>
+<p class="form-note">Descreva o problema para avaliar o atendimento necessário. O envio não abre um chamado automático nem garante prioridade.</p>
+<div class="form-row">
+<div class="field">
+<label for="sName">Nome</label>
+<input id="sName" name="sName" type="text" required maxlength="120" autocomplete="name" minlength="2">
+</div>
+<div class="field">
+<label for="sEmail">E-mail</label>
+<input id="sEmail" name="sEmail" type="email" required maxlength="254" autocomplete="email">
+</div>
+</div>
+<div class="form-row">
+<div class="field">
+<label for="sPhone">WhatsApp</label>
+<input id="sPhone" name="sPhone" type="tel" required maxlength="120" autocomplete="tel" inputmode="tel" pattern="[0-9+\(\) .\-]{10,22}" title="Informe um telefone com DDD.">
+</div>
+<div class="field">
+<label for="sPerson">Tipo de cliente</label>
+<select id="sPerson" name="sPerson" required>
+<option value="">Selecione</option>
+<option value="pf">Pessoa física</option>
+<option value="pj">Pessoa jurídica / empresa</option>
+</select>
+</div>
+</div>
+<div class="company-field" hidden>
+<div class="field">
+<label for="sCompany">Nome da empresa</label>
+<input id="sCompany" name="sCompany" type="text" maxlength="120" autocomplete="organization">
+</div>
+</div>
+<div class="field">
+<label for="sMode">Modalidade preferida</label>
+<select id="sMode" name="sMode" required>
+<option value="">Selecione</option>
+<option value="remoto">Remoto</option>
+<option value="presencial">Presencial</option>
+</select>
+</div>
+<div class="form-row location-fields">
+<div class="field">
+<label for="sCity">Cidade (obrigatória para presencial)</label>
+<input id="sCity" name="sCity" type="text" maxlength="120" autocomplete="address-level2">
+</div>
+<div class="field">
+<label for="sState">Estado</label>
+<select id="sState" name="sState" >
+<option value="">Selecione</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AP">AP</option>
+<option value="AM">AM</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MT">MT</option>
+<option value="MS">MS</option>
+<option value="MG">MG</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PR">PR</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RS">RS</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="SC">SC</option>
+<option value="SP">SP</option>
+<option value="SE">SE</option>
+<option value="TO">TO</option>
+</select>
+</div>
+</div>
+<div class="field">
+<label for="sEquipment">Equipamento ou serviço afetado</label>
+<input id="sEquipment" name="sEquipment" type="text" required maxlength="120" >
+</div>
+<div class="field">
+<label for="sMessage">Descrição do problema</label>
+<textarea id="sMessage" name="sMessage" rows="5" minlength="10" maxlength="5000" required>
+</textarea>
+</div>
+<div class="honeypot" aria-hidden="true">
+<label for="sWebsite">Deixe este campo vazio</label>
+<input id="sWebsite" name="website" tabindex="-1" autocomplete="off">
+</div>
+<div class="turnstile-slot">
+</div>
+<p class="form-note">Seus dados serão usados para avaliar a solicitação e entrar em contato. Não envie senhas, documentos ou informações sensíveis. Dúvidas sobre seus dados: <a data-contact-email href="mailto:contato@nexguardtech.com.br">contato@nexguardtech.com.br</a>.</p>
+<button class="btn btn-primary btn-lg btn-block" type="submit" disabled>Enviar pedido de suporte</button>
+<p class="form-status" role="status" aria-live="polite" hidden>
+</p>
+<noscript>Ative o JavaScript para enviar o formulário ou utilize o WhatsApp.</noscript>
+</form>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a class="brand" href="#topo" aria-label="NexGuard, voltar ao início">
+        <img class="brand-logo logo-on-light" src="assets/nexguard/nexguard-logo-header-fundo-claro.svg" alt="" width="1600" height="470">
+      <img class="brand-logo logo-on-dark" src="assets/nexguard/nexguard-logo-header-fundo-escuro.svg" alt="" width="1600" height="470">
+      </a>
+      <p>Tecnologia para empresas e pessoas físicas.</p>
+    </div>
+    <div>
+      <h2>Navegue</h2>
+      <ul>
+        <li>
+<a href="#solucoes">Soluções</a>
+</li>
+<li>
+<a href="#precos">Manutenção e valores</a>
+</li>
+        <li>
+<a href="#como-trabalhamos">Como trabalhamos</a>
+</li>
+        <li>
+<a href="#checkup">Checkup de TI</a>
+</li>
+        <li>
+<a href="#duvidas">Dúvidas</a>
+</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Contato</h2>
+      <ul>
+        <li>
+<a href="https://wa.me/5519993427954?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20NexGuard%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener">WhatsApp: (19) 99342-7954</a>
+</li>
+        <li>
+<a href="mailto:contato@nexguardtech.com.br">contato@nexguardtech.com.br</a>
+</li>
+        <li>Hortolândia, Campinas, Sumaré e região</li>
+        <li>Atendimento mediante agendamento</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-fine">© 2026 NexGuard · Tecnologia • Segurança • Operação</div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/5519993427954?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20NexGuard%20e%20gostaria%20de%20atendimento." target="_blank" rel="noopener" aria-label="Chamar a NexGuard no WhatsApp"><svg class="icon" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+<span>WhatsApp</span>
+</a>
+
+<script src="assets/js/business.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
